@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Getting Grades </title>
+<script>
+
+function Enter() 
+{
+  var name = document.getElementById("name").value
+  var course = document.getElementById("course").value
+  var section = document.getElementById("section").value
+
+  var prelimGrade = parseFloat(document.getElementById("prelimGrade").value)
+  var midtermGrade = parseFloat(document.getElementById("midtermGrade").value)
+  var finalGrade = parseFloat(document.getElementById("finalGrade").value)
+  
+  var finalRate = (prelimGrade + midtermGrade + finalGrade) / 3
+
+  document.getElementById("result").innerHTML = "<hr>" + "Your Name: " + name + "<br>" +
+    "Your Course is: " + course + "<br>" +
+    "Your Section is: " + section + "<br><br>" +
+    "Enter Prelim Grade: " + prelimGrade + "<br>" +
+    "Enter Midterm Grade: " + midtermGrade + "<br>" +
+    "Enter Final Grade: " + finalGrade + "<br><br>" +
+    "Your Final Rate is: " + finalRate + "<br><br>"
+}
+
+</script>
+</head>
+<body>
+<center>
+    <h1> Activity on Classes, Methods, Objects</h1>
+</center>
+<form>
+  <label for="name">Enter your Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+
+  <label for="course">Enter your Course:</label><br>
+  <input type="text" id="course" name="course"><br>
+
+  <label for="section">Enter your section:</label><br>
+  <input type="text" id="section" name="section"><br><br>
+
+  <label for="prelimGrade">Enter your Prelim Grade:</label><br>
+  <input type="text" id="prelimGrade" name="prelimGrade"><br>
+
+  <label for="midtermGrade">Enter your Midterm Grade:</label><br>
+  <input type="text" id="midtermGrade" name="midtermGrade"><br>
+
+  <label for="finalGrade">Enter your Final Grade:</label><br>
+  <input type="text" id="finalGrade" name="finalGrade"><br>
+
+  <input type= "button" onclick="Enter()" value = "Click Here" /><br>
+</form>
+
+<div id="result"></div>
+</body>
+</html>
